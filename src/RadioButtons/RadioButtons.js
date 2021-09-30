@@ -6,7 +6,7 @@ class RadioButtons extends Component {
   // Initialize starting current page to 1
   constructor(props) {
     super(props);
-    this.state = {curButton: 1}
+    this.state = {curButton: undefined}
   }
 
   // onClick event change state of button
@@ -33,7 +33,14 @@ class RadioButtons extends Component {
     // Return the construct
     return (
       <div className="RadioButtons">
-        {buttons}
+       <div className="RadioButtons-container">
+          {buttons}
+          {(curButton &&
+           <div>
+              {curButton}!
+            </div>
+          )}
+        </div>
       </div>
     );
   }

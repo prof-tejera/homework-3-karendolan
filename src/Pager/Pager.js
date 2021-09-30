@@ -70,7 +70,6 @@ class Pager extends Component {
         />
       )
     });
-    console.log('pagerButtons', pagerButtons);
 
     // Return the construct
     return (
@@ -94,6 +93,11 @@ class Pager extends Component {
             onClick={(() => this.onClick(curPage < pageCount ? curPage + 1: pageCount))}
           />
         </div>
+        {(curPage &&
+         <div>
+            On page {curPage}
+          </div>
+        )}
       </div>
     )
   }
