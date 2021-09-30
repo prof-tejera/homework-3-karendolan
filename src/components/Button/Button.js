@@ -12,6 +12,7 @@ class Button extends Component {
       onClick
     } = this.props;
 
+    // Extra class names for CSS
     const classNameValue = `Default-button Default-button-${color}`;
 
     return (

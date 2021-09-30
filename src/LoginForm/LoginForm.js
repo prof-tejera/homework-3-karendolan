@@ -60,9 +60,9 @@ class LoginForm extends Component {
       return (
         <Input
           onChange={(data) => {
+            // construct the value object for destructing
             const obj = {};
             obj[prompt] = data;
-            console.log('data', prompt, data, {prompt: data}, obj);
             this.updateLoginText(obj);
           }}
           prompt={prompt}

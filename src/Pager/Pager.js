@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Button from 'components/Button/Button';
+import './Pager.css';
 
 class Pager extends Component {
   // Initialize starting current page to 1
@@ -53,6 +54,7 @@ class Pager extends Component {
         return (
           <Button
             key={v}
+            disabled={true}
             text='...'
             // no onClick for this item
           />
@@ -72,22 +74,26 @@ class Pager extends Component {
 
     // Return the construct
     return (
-      <div>
-        <Button
-          text="<"
-          onClick={(() => this.onClick(curPage > 1 ? curPage - 1 : 1))}
-        />
-        {pagerButtons}
-        <Button
-          key={pageCount}
-          text={pageCount}
-          color={pageCount === curPage? 'blue' : 'neutral'}
-          onClick={(() => this.onClick(pageCount))}
-        />
-        <Button
-          text=">"
-          onClick={(() => this.onClick(curPage < pageCount ? curPage + 1: pageCount))}
-        />
+      <div className="Pager">
+        <div className="Pager-container">
+          <Button
+            text="<"
+            disabled={(curPage <= 1)}
+            onClick={(() => this.onClick(curPage > 1 ? curPage - 1 : 1))}
+          />
+          {pagerButtons}
+          <Button
+            key={pageCount}
+            text={pageCount}
+            color={pageCount === curPage? 'blue' : 'neutral'}
+            onClick={(() => this.onClick(pageCount))}
+          />
+          <Button
+            text=">"
+            disabled={(curPage >= pageCount)}
+            onClick={(() => this.onClick(curPage < pageCount ? curPage + 1: pageCount))}
+          />
+        </div>
       </div>
     )
   }
