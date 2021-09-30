@@ -4,6 +4,10 @@ import Input from 'components/Input/Input';
 import Button from 'components/Button/Button';
 
 class LoginForm extends Component {
+
+  welcome = () => {
+    // set state say hi to login name
+  }
   render() {
     // The array of input data
     const loginInputs = [
@@ -36,6 +40,8 @@ class LoginForm extends Component {
         {inputs}
         <Button
           text="LOGIN"
+          color="green"
+          onClick={()=>this.welcome()}
         />
       </div>
     );
