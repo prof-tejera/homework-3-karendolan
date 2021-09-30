@@ -13,3 +13,13 @@
 .Default-button:active {
   background-color: #d0d0d0;
 }
+
+.Default-button.blue {
+  color: white;
+  background-color: #008CBA;
+}
+
+.Default-button.neutral {
+  color: black;
+  background-color: white;
+}

@@ -19,7 +19,7 @@ class App extends Component {
         </div>
 
         <div className="App-component">
-          <header className="App-header">Login form component (TODO)</header>
+          <header className="App-header">Login form component</header>
           <div className="App-content">
             <LoginForm />
           </div>
