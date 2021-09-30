@@ -2,8 +2,28 @@ import { Component } from 'react';
 import './Button.css';
 
 class Button extends Component {
+
   render() {
-    return <button className="Default-button">{this.props.text}</button>;
+    // Extract the props
+    const {
+      text,
+      disabled=false,
+      color='neutral',
+      onClick
+    } = this.props;
+
+    // Extra class names for CSS
+    const classNameValue = `Default-button Default-button-${color}`;
+
+    return (
+      <button
+        className={classNameValue}
+        disabled={disabled && 'disabled'}
+        onClick={onClick}
+      >
+       {text}
+      </button>
+    );
   }
 }
 

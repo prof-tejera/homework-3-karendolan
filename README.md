@@ -21,6 +21,7 @@ In this assignment we will start to use React components. The goal of this assig
 2. Figure out what props you want to pass down to each component. Example: let's say we created a button component some, but not limited to, of the props that I might pass down could be a enable/disable flag, a way to change the color, and a button size. 
 3. Feel free to add custom styling any new generic components you want.
 4. For generic components that are taking event handlers (e.g. `onClick`, `onChange`, etc...), you are going to want to use `console.log` in the parent component so that you can see if your event is firing. Example: 
+
 ```
 const Input = ({ onChange }) => {
   return <input type="text" onChange={e => onChange(e.target.value)} />
@@ -31,8 +32,9 @@ const SomeComponentThatUsesInput = () => {
     <Input onChange={v => console.log(`Hello from App - Input Value is: ${v}`)}/>
   </div>
 }
+
 ```
-6. **Deploy your app using whatever method you want (e.g. Github Pages, AWS, ect) and insert the url here: URL_TO_PROJECT**
+6. Homework published to [ https://homework-3-karendolan.onrender.com](https://homework-3-karendolan.onrender.com)
 
 ## Bonus
 - Pager: If you have hardcoded a pager that works 1 to 10, then how might we modify it to be a bit more generic? What props can I pass in that will make the component more configurable?

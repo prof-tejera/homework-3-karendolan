@@ -5,11 +5,31 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.5em;
   margin: 4px 2px;
   cursor: pointer;
 }
 
 .Default-button:active {
   background-color: #d0d0d0;
+}
+
+.Default-button:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+.Default-button-blue {
+  color: white;
+  background-color: #008CBA;
+}
+
+.Default-button-neutral {
+  color: black;
+  background-color: white;
+}
+
+.Default-button-green {
+  color: white;
+  background-color: #28a745;
 }
