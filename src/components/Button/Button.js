@@ -8,14 +8,16 @@ class Button extends Component {
     const {
       text,
       disabled=false,
-      buttonColor='blue',
+      color='neutral',
       onClick
     } = this.props;
+
+    const classNameValue = `Default-button Default-button-${color}`;
+
     return (
       <button
-        className="Default-button"
+        className={classNameValue}
         disabled={disabled && 'disabled'}
-        style={{backgroundColor: {buttonColor}}}
         onClick={onClick}
       >
        {text}

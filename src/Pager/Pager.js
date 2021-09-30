@@ -42,6 +42,7 @@ class Pager extends Component {
           <Button
             key={v}
             text={v}
+            color={v === curPage? 'blue' : 'neutral'}
             onClick={(() => this.onClick(v))}
           />
         )
@@ -62,6 +63,7 @@ class Pager extends Component {
         <Button
           key={v}
           text={v}
+          color={v === curPage? 'blue' : 'neutral'}
           onClick={(() => this.onClick(v))}
         />
       )
@@ -79,6 +81,7 @@ class Pager extends Component {
         <Button
           key={pageCount}
           text={pageCount}
+          color={pageCount === curPage? 'blue' : 'neutral'}
           onClick={(() => this.onClick(pageCount))}
         />
         <Button
