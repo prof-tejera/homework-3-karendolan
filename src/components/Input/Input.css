@@ -1,6 +1,9 @@
 .Input {
   min-width: 200px;
   padding: 15px 32px;
-  font-size: 16px;
+  font-size: 1.3em;
   margin: 4px 2px;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.1);
+
 }

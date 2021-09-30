@@ -8,6 +8,7 @@ class Input extends Component {
       name,
       prompt,
       type,
+      onChange,
     } = this.props;
 
     return (
@@ -16,6 +17,7 @@ class Input extends Component {
         name={name}
         type={type}
         placeholder={prompt}
+        onChange={(e) => onChange(e.target.value)}
      />
    );
   }

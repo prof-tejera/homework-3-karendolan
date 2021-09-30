@@ -1,5 +1,13 @@
 .LoginForm {
+  min-width: 500px;
+  padding: 60px;
+  /* background-color: #28a745; */
+  background-color: rgba(40, 167, 69, 0.7);
+}
+
+.LoginForm-container  {
   display:flex;
   flex-direction: column;
-  min-width: 500px;
+  padding: 60px;
+  background-color: white;
 }
